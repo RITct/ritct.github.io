@@ -1,2 +1,2 @@
-# ritcsa.github.io
+# ritct.github.io
 RITCT Website
