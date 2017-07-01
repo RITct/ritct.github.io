@@ -1,0 +1,31 @@
+body
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#head
+{
+  font-family: Anton;
+  font-size: 40px;
+  background-color:#002966;
+}
+#about
+{
+  border: 2px solid #002966;
+  margin-top:100px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+#project
+{
+  margin-top:100px;
+  border: 2px solid #002966;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+#text
+{
+  font-family:  sans-serif;
+}
