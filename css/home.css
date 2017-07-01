@@ -17,9 +17,10 @@ body
   text-align: center;
   font-size: 20px;
 }
-#project
+.boxes
 {
   margin-top:100px;
+
   border: 2px solid #002966;
   padding: 10px 10px 10px 10px;
   text-align: center;
@@ -27,5 +28,5 @@ body
 }
 #text
 {
-  font-family:  sans-serif;
+  font-family: sans-serif;
 }
