@@ -1,0 +1,331 @@
+---
+layout: post
+title:  "An Introduction to NumPy"
+date:   2017-07-06 13:32:02 +0530
+categories: jekyll update
+---
+![NumPy](https://qph.ec.quoracdn.net/main-qimg-0dd200b7b6ea327eda2caa9a1854c48d-c)
+
+Numerical python or simply NumPy is one of the best modules to perform scientific computing in python. It is extensively used for data science as well as image manipulation using python. I recently learned how to use this module effectively in my projects, when started learning Machine learning and Data Science using python. I was amazed with the features of NumPy and I found it quite interesting to work with NumPy. Within some hours of usage i fell in love with it.
+
+**What is NumPy**
+
+[Numpy’s GitHub readme](https://github.com/numpy/numpy/blob/master/README.md) defines it as:
+
+NumPy is the fundamental package needed for scientific computing with Python. This package contains:
+
+* a powerful N-dimensional array object
+* sophisticated (broadcasting) functions
+* tools for integrating C/C++ and Fortran code
+* useful linear algebra, Fourier transform, and random number capabilities.
+
+It derives from the old Numeric code base and can be used as a replacement for Numeric. It also adds the features introduced by numarray and can be used to replace numarray.
+
+Simply NumPy is an open source python library that allows us to do scientific calculations in python. It has superpowers to magically support daunting vector and matrix computations. The core of the NumPy package, is the ndarray object. This encapsulates n-dimensional arrays of homogeneous data types, with many optimizations for performance. Narrays are created in contrast to Python’s built-in list data structure.
+
+**Why NumPy**
+
+As i said earlier, NumPy is created to overcome the limitations of python’s list data structure. We can use python lists instead of NumPy to perform various calculations like matrix multiplication, vector products etc. Using NumPy instead of lists will not only improve the performance of the code, but also will reduce the number of lines of the code. In this blog i will compare list datatype with numpy.
+
+**Install NumPy**
+
+You can use pip to install NumPy. If you don’t have python and pip installed, you can download it from [here](http://python.org/download/). After installation, use the command below to install NumPy:
+```bash
+pip install numpy
+```
+Now the NumPy will be installed on your machine.
+
+**Numpy v/s Lists**
+
+Python has a powerful built in data type known as lists. It has everything in its superpower to make it useful for almost any advanced scientific applications, but it is still limited while comparing to NumPy’s array data type. Lets compare python lists with NumPy arrays. I will be using python shell in this examples. Just type the python command to launch the shell.
+
+You can create a NumPy array using the code below:
+
+```python
+    >>> import numpy as np
+    >>> a = np.array([1,2,3,4])
+    >>> a
+    array([1, 2, 3, 4])
+```
+
+You can create a new python list containing same elements using the code below:
+
+```python
+    >> b = [1, 2, 3, 4]
+    >>> b
+    [1, 2, 3, 4]
+```
+
+lets print both of them to the console:
+
+```python
+    >>> for element in a: # Numpy Array
+     ...     print(element)
+     1
+     2
+     3
+     4
+     >>> for element in b: # Python List
+     ...     print(element)
+     1
+     2
+     3
+     4
+```
+
+As you can see that NumPy array works exactly the same way as list. We can simply use a loop to print its elements. Even though both looks the same, there’s some difference with the python lists and NumPy arrays. We can simply use the code below to add a new element to the list:
+
+```python
+    >>> b.append(5)
+    >>> b
+    [1, 2, 3, 4, 5]
+    >>> b += [6,7]
+    >>> b
+    [1, 2, 3, 4, 5, 6, 7]
+```
+
+We can’t do the same in NumPy arrays, It will throw an error:
+
+```python
+    >>> a.append(2)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    AttributeError: 'numpy.ndarray' object has no attribute 'append'
+    >>> a += [5,6]
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    ValueError: operands could not be broadcast together with shapes (4,) (2,) (4,)
+```
+
+As you can see that both doesn’t works in the case of NumPy array. Lists use plus operator for concatenation, but NumPy arrays use the plus operator differently. So lets check it out. Lets find the element wise sum of an array using NumPy and python lists:
+
+```python
+    >>> b2 = [] # Temporary List
+    >>> for element in b: # Using List
+    ...     b2.append(element + element)
+    >>> b2
+    [2, 4, 6, 8, 10, 12, 14]
+     
+     
+    >> a + a # Using NumPy array
+    array([2, 4, 6, 8])
+```
+
+Pretty easy right!
+
+**NumPy in action**
+
+NumPy arrays treat plus operator(+) as the element wise addition operator. We can also use it to add two different arrays, or even we can use it to perform scalar addition to an array. NumPy array treats multiplication operator(*) as matrix multiplication operator. Most operators act element wise in NumPy arrays. Lets see the superpowers of NumPy arrays:
+
+```python
+    >>> a # NumPy Array
+    array([1, 2, 3, 4])
+    >>> a2 = np.array([4,5,6,7]) #New NumPy array
+     
+    >>> a + a2 # Matrix addition
+    array([ 5,  7,  9, 11])
+    >>> a + 3 # Addition with a scalar
+    array([4, 5, 6, 7])
+     
+    >>> a * a2 # Matrix multiplication
+    array([ 4, 10, 18, 28])
+     
+    >>> a * 3 # Multiplication with a scalar
+    array([ 3,  6,  9, 12])
+    >>> a ** 3 # Power operator
+    array([ 1,  8, 27, 64], dtype=int32)
+    >>> a.sum() # Sum of elements in a
+    45
+```
+
+As you can see that the matrix arithmetic works like a breeze in NumPy arrays. We don’t need to use the annoying loops anymore to perform those.
+
+If you have an N dimensional matrix you can use NumPy to perform all these operations on it. NumPy has everything built in to perform these operations effectively by providing an abstract layer to you. For a 2D matrix lets check these operations:
+
+```python
+    >>> a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+    >>> a
+    array([[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]])
+    >>> a2 = np.array([[10,11,12],[13,14,15],[16,17,18]])
+    >>> a2
+    array([[10, 11, 12],
+           [13, 14, 15],
+           [16, 17, 18]])
+     
+    >>> a[0] # access each row
+    array([1, 2, 3])
+     
+    >>> a[0][1] # access element i=0 j=1
+    2
+    >>> a[0,1] # access element i=0 j=1
+    2
+     
+     
+    >>> a * 2 # Scalar Multiplication
+    array([[ 2,  4,  6],
+           [ 8, 10, 12],
+           [14, 16, 18]])
+     
+    >>> a + a2 # Addition
+    array([[11, 13, 15],
+           [17, 19, 21],
+           [23, 25, 27]])
+     
+    >>> a * a2 # Multiplication
+    array([[ 10,  22,  36],
+           [ 52,  70,  90],
+           [112, 136, 162]])
+     
+    >>> a - a2 # Subraction
+    array([[-9, -9, -9],
+           [-9, -9, -9],
+           [-9, -9, -9]])
+     
+    >>> inva = np.linalg.inv(a) # a inverse
+    >>> inva
+    array([[ -4.50359963e+15,   9.00719925e+15,  -4.50359963e+15],
+           [  9.00719925e+15,  -1.80143985e+16,   9.00719925e+15],
+           [ -4.50359963e+15,   9.00719925e+15,  -4.50359963e+15]])
+     
+    >>> np.linalg.det(a) # Determinant of a
+    6.6613381477509402e-16
+     
+    >>> np.diag(a) # Diagonals of a
+    array([1, 5, 9])
+     
+    >>> np.trace(a) # Sum of diagonals
+    15
+     
+    >>> x = np.linalg.eig(a) # Eigen values and eigen vectors of a
+    >>> x
+    (array([  1.61168440e+01,  -1.11684397e+00,  -1.30367773e-15]), array([[-0.23197069, -0.78583024,  0.40824829],
+           [-0.52532209, -0.08675134, -0.81649658],
+           [-0.8186735 ,  0.61232756,  0.40824829]]))
+    >>> x[0] # eigen value
+    array([  1.61168440e+01,  -1.11684397e+00,  -1.30367773e-15])
+    >>> x[1] # eigen vectors
+    array([[-0.23197069, -0.78583024,  0.40824829],
+           [-0.52532209, -0.08675134, -0.81649658],
+           [-0.8186735 ,  0.61232756,  0.40824829]])
+     
+    >>> a ** 2 # Power
+    array([[ 1,  4,  9],
+           [16, 25, 36],
+           [49, 64, 81]])
+     
+    >>> a2.T # Transpose of a2
+    array([[10, 13, 16],
+           [11, 14, 17],
+           [12, 15, 18]])
+     
+    >>> a.mean() # mean
+    5.0
+     
+    >>> a.var() # variance
+    6.666666666666667
+     
+     
+    >>> a = np.matrix([[1,2,3],[4,5,6],[7,8,9]])
+    >>> a # NumPy Matrix type
+    matrix([[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]])
+```
+
+NumPy also have a matrix type in addition to NumPy arrays. The official documentation recommends using matrix type for matrix operations. NumPy performs well for multidimensional matrices as well. In addition with these standard operations NumPy has several other functions available to make your programs a lot more simpler. Lets see some of the examples:
+
+```python
+    >>> a = np.array([1,2,3])
+    >>> a
+    array([1, 2, 3])
+    >>> np.sqrt(a)
+    array([ 1.        ,  1.41421356,  1.73205081])
+    >>> np.sin(a)
+    array([ 0.84147098,  0.90929743,  0.14112001])
+    >>> np.cos(a)
+    array([ 0.54030231, -0.41614684, -0.9899925 ])
+    >>> np.tan(a)
+    array([ 1.55740772, -2.18503986, -0.14254654])
+    >>> np.log(a)
+    array([ 0.        ,  0.69314718,  1.09861229])
+    >>> np.exp(a)
+    array([  2.71828183,   7.3890561 ,  20.08553692])
+```
+
+So simply NumPy treats an array like a vector or a mathematical object. To do operations on list, you need to use a for loop. Since for loops are slow it may take more time to perform various operations while compared to NumPy arrays. Lets do some operations on vector and matrices:
+
+```python
+    >>> a
+    array([[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]])
+    >>> a2
+    array([[10, 11, 12],
+           [13, 14, 15],
+           [16, 17, 18]])
+    >>> a.dot(a2) # Dot product a.a2
+    array([[ 84,  90,  96],
+           [201, 216, 231],
+           [318, 342, 366]])
+    >>> a2.dot(a)# Dot product a2.a
+    array([[138, 171, 204],
+           [174, 216, 258],
+           [210, 261, 312]])
+    >>> np.dot(a,a2) # Dot product a.a2
+    array([[ 84,  90,  96],
+           [201, 216, 231],
+           [318, 342, 366]])
+    >>> a = np.array([2,3])
+    >>> a2 = np.array([4,5])
+    >>> maga = np.linalg.norm(a) # magnitude of a
+    >>> maga2 = np.linalg.norm(a2) @ magnitude of a2
+    >>> angle = np.arccos(a.dot(a2) / (maga * maga2)) # angle between a and a2
+    >>> angle # in radian
+    1.1352271440633694
+```
+
+To generate random matrices for testing just use:
+
+```python
+>> z = np.zeros(10) # Generates zero array
+>>> z 
+array([ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.])
+ 
+>>> np.zeros((5,5)) # 5*5 Zero matrix
+array([[ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.],
+       [ 0.,  0.,  0.,  0.,  0.]])
+ 
+>>> np.ones((5,5)) # 5*5 Unit matrix
+array([[ 1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.]])
+ 
+>>> np.random.random((5,5)) # random 5*5 array with elements < 0
+array([[ 0.95798455,  0.24020745,  0.62194033,  0.93840616,  0.40785382],
+       [ 0.01294948,  0.7228686 ,  0.67448551,  0.20403856,  0.046528  ],
+       [ 0.63331545,  0.89097084,  0.01754348,  0.17084474,  0.32112247],
+       [ 0.97881143,  0.83247286,  0.65629919,  0.21386575,  0.72251318],
+       [ 0.20167738,  0.24018638,  0.85572554,  0.7706282 ,  0.80284553]])
+ 
+>>> np.random.randn(5,5) # Random 5*5 matrix
+array([[ 0.16603893,  1.14554164,  0.40170708,  0.52864275,  1.50740231],
+       [ 0.13218522, -0.20418907, -1.09940842, -1.25180194,  0.6859655 ],
+       [ 0.09053258,  1.11002797,  0.1455936 , -0.33915414,  0.25604553],
+       [ 0.96807902, -0.03155716, -0.79001785,  0.4567955 , -1.93929055],
+       [-1.38540075, -1.82320053,  0.02358358, -1.13975953, -1.23515682]])
+```
+
+Summing up all these, even though the NumPy arrays contain several advanced functions when compared with lists datatype, it can’t be considered as a replacement for python lists. NumPy is really useful if you want do do some mathematical operations on an array, If we are using a list instead of NumPy arrays we need to traverse each and every elements using a loop, it will significantly reduce the overall performance of the program. Using NumPy will not only improves the performance of the program, but also adds advanced functionalities to the code.
+
+Visit the official docs to learn more: https://docs.scipy.org/doc/numpy/
+
+Any suggestions to this article is always welcome. Please don’t forget to comment on this article if you found any mistakes
+
+**This article was originally published at**: [An Intro to NumPy](http://www.gautamkrishnar.com/an-intro-to-numpy/)
