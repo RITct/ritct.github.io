@@ -1,20 +1,29 @@
-
 #head
 {
   font-family:'Dosis:400', sans-serif;
-    
+
   font-size: 40px;
   background-color:#45a29e;
+}
+.blog
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url("../assets/images/blogbg.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  text-shadow: #ff0000;
 }
 #about
 {
   border: 2px solid #45a29e;
   margin-top:420px;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 10px 10px;
   text-align: center;
   font-size: 20px;
      width:100%;
 }
+
 .boxes
 {
   margin-top:100px;
@@ -33,35 +42,26 @@
 header {
     float: left;
    font-family: 'Dosis', sans-serif;
-    
+
     width: 100%;
 background-image:url('../assets/images/ny.jpeg');
-    
-    
-    
+background-attachment: fixed;
+
+
   }
 
 
 
 .brandQuote{
- 
-  padding-left: 320px;  
-    
-    
+
+  padding-left: 320px;
 }
 
+body
+{
+  margin:0;
+  overflow-x: hidden;
+}
 
 
 /*fixed horizontal scroll */
-html, body {
-
-    overflow-x: hidden;
-}
-
-
-
-
-
-
-
-
