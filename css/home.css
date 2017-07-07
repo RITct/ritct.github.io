@@ -1,22 +1,24 @@
 
 #head
 {
-  font-family:Anton;
+  font-family:'Dosis:400', sans-serif;
+    
   font-size: 40px;
   background-color:#45a29e;
 }
 #about
 {
   border: 2px solid #45a29e;
-  margin-top:500px;
+  margin-top:420px;
   padding: 10px 10px 10px 10px;
   text-align: center;
   font-size: 20px;
+     width:100%;
 }
 .boxes
 {
   margin-top:100px;
-
+    width:100%;
   border: 2px solid #45a29e;
   padding: 10px 10px 10px 10px;
   text-align: center;
@@ -24,20 +26,40 @@
 }
 #text
 {
-  font-family: monospace;
+  font-family: 'Dosis', sans-serif;
 }
 
 
 header {
     float: left;
-   
+   font-family: 'Dosis', sans-serif;
     
     width: 100%;
-background-image:url('../assets/images/ny.jpg');
+background-image:url('../assets/images/ny.jpeg');
     
     
     
   }
+
+
+
+.brandQuote{
+ 
+  padding-left: 320px;  
+    
+    
+}
+
+
+
+/*fixed horizontal scroll */
+html, body {
+
+    overflow-x: hidden;
+}
+
+
+
 
 
 
