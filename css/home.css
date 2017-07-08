@@ -14,6 +14,7 @@
   margin-bottom: 10%;
   border-radius: 30px;
   text-shadow: #ff0000;
+  padding: 3% 3% 5% 3%;
 }
 #about
 {
@@ -64,8 +65,8 @@ background-attachment: fixed;
 #contact{
   margin-top:50px; 
   margin-bottom:50px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
