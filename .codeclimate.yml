@@ -1,2 +1,6 @@
 exclude_paths:
+<<<<<<< HEAD
 -"blog/" ## exclude blog
+=======
+-"blog/"
+>>>>>>> e56860c82057bdb40ba6d4a2fa67663904e34ed6
