@@ -11,6 +11,7 @@
   background-size: 100% auto;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  margin-bottom: 10%;
   border-radius: 30px;
   text-shadow: #ff0000;
 }
@@ -60,8 +61,15 @@ background-attachment: fixed;
   height: 120px;
 }
 
+#contact{
+  margin-top:50px; 
+  margin-bottom:50px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .project_img{
+.project_img{
   width: 75px;
   height: 50;
 }
@@ -69,6 +77,11 @@ background-attachment: fixed;
 .blog_img{
   width: 80px;
   height: 50px;
+}
+
+#contact{
+  margin-left: 5%;
+  margin-right: 5%;
 }
 }
 
