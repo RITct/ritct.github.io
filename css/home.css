@@ -56,8 +56,8 @@ background-attachment: fixed;
 }
 
 .blog_img{
-  width: 200;
-  height: auto;
+  width: 200px;
+  height: 120px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -68,7 +68,7 @@ background-attachment: fixed;
 
 .blog_img{
   width: 80px;
-  height: auto;
+  height: 50px;
 }
 }
 
