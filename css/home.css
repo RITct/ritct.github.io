@@ -70,8 +70,9 @@ background-attachment: fixed;
 }
 
 .brandQuote{
-
+  font-size: 400%;
   padding-left: 290px;
+  color= #1f2833;
 }
 
 body
@@ -98,7 +99,7 @@ body
 
 .brandQuote{
   padding-left: 10px;
-  font-size: 75%;
+  font-size: 100%;
 }
 
 }
