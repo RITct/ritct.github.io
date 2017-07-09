@@ -10,7 +10,6 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../assets/images/blogbg.jpg');
   background-size: 100%;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   margin-bottom: 10%;
   border-radius: 30px;
   text-shadow: #ff0000;
@@ -99,7 +98,15 @@ body
 
 .brandQuote{
   padding-left: 10px;
-  font-size: 100%;
+  font-size: 250%;
+}
+
+.blog{
+  background-size: auto;
+}
+
+.header{
+  background-size: auto;
 }
 
 }
