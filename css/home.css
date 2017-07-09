@@ -8,7 +8,7 @@
 .blog
 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../assets/images/blogbg.jpg');
-  background-size: 100% auto;
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin-bottom: 10%;
@@ -69,6 +69,17 @@ background-attachment: fixed;
   margin-right: 25%;
 }
 
+.brandQuote{
+
+  padding-left: 290px;
+}
+
+body
+{
+  margin:0;
+  overflow-x: hidden;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 .project_img{
   width: 75px;
@@ -84,19 +95,14 @@ background-attachment: fixed;
   margin-left: 5px;
   margin-right: 5px;
 }
-}
-
 
 .brandQuote{
-
-  padding-left: 320px;
+  padding-left: 5px;
 }
 
-body
-{
-  margin:0;
-  overflow-x: hidden;
 }
+
+
 
 
 /*fixed horizontal scroll */
