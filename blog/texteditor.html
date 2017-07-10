@@ -4,7 +4,12 @@
   <script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=kgiblty5amr904k4x8fofyo831orwe8z572sj9m9w7ojzimn'></script>
   <script>
   tinymce.init({
-    selector: '#mytextarea'
+    selector: '#mytextarea',
+    plugins: ['emoticons', 'image', 'codesample', 'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table contextmenu paste code'],
+    menubar :['insert'],
+  	toolbar: 'undo redo | emoticons | codesample | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
   });
   </script>
 </head>
@@ -15,7 +20,7 @@
               		<div class="col-10 col-md-6">
 	              		<form action="https://formspree.io/aksh@ritcreativeteam.ml" method="POST">
 	                       <br style="clear:both">
-	                       <h3 style="margin-bottom: 25px; text-align: center;">Write a post !</h3>
+	                       <h1 style="margin-bottom: 25px; text-align: left;">Write a post !</h1>
 	                       <div class="form-group">
 	                          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
 	                       </div>
