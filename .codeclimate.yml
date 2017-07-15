@@ -1,3 +1,11 @@
+engines:
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript:
 exclude_paths:
--"blog/"
--"bootstrap/"
+- blog/
+- bootstrap/
