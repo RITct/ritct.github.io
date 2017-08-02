@@ -60,6 +60,11 @@ background-attachment: fixed;
   width: 200px;
   height: 120px;
 }
+.event_img{
+  width: 200px;
+  height: 120px;
+
+}
 
 #contact{
   margin: 50px 25% 50px 25%; 
@@ -87,6 +92,12 @@ body
   width: 80px;
   height: 50px;
 }
+
+.event_img{
+  width: 80px;
+  height: 50px;
+}
+
 
 #contact{
   margin-left: 5px;

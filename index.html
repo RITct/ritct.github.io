@@ -18,6 +18,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="events/assets/style.css">
+		<script src="events/asstes/model.js"></script>
 
   	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
@@ -203,6 +205,55 @@
 	</div>
 	<br>
 	<br><br><br>
+	<!-------------------------------------------------------------------------------->
+	<script>
+	$(document).ready(function(){
+  $(".event_img").click(function(){
+	$(".modal").fadeIn();
+	$(".modal_main").show();
+	  });
+});
+$(document).ready(function(){
+  $(".close").click(function(){
+	$(".modal").fadeOut();
+	$(".modal_main").fadeOut();
+	  });
+});
+	</script>
+	<div class="blog col-sm-12" style="color:#ffffff;margin-top:100px;">
+				<div style="margin-top:40px;float:center;">
+					<h1 style="text-align:center;"><a style="text-decoration:none" href="events/event.html">EVENTS</a></h1>
+					<br>
+					<br>
+					<div class=row>
+						<div class="col-sm-6">
+							<div class=col-xs-6>
+								<a style="text-decoration:none" class="event_img"><img src="events\assets\images\mind.jpg" class="event_img"/></a>
+								<p><a style="text-decoration:none" href="events/post/e1.html">Workshop on Machine Learning</a></p>
+							</div>
+							<div class="modal">
+							<div class="modal_close close"></div>
+							<div class="modal_main">
+							<img src="events\assets\images\close.png" class="close" style="margin-top:13px;left:96%;position:fixed;">
+    						<h1 style="font-size:16%;"><pre><img src="events\assets\images\mind.jpg" class="event_img"/> Workshop on Machine Learning </pre></h1>
+    						<pre>
+  ThinkerHUb-RIT kicks off its activities for the new semester with a Workshop on
+   Machine Learning.
+  <a href="events/post/e1.html">read more</a>
+        <h3>Date: Tuesday,8th August 2017<br>Time: 4 pm<br>Venue:CSE Department,3rd year classroom</h3><button class="call_modal" style="cursor:pointer;">Regester</button>
+    </pre>
+
+</div>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br><br><br>		
+	<!-------------------------------------------------------------------------------->
 	<footer class="page-footer">
 	<div class="container" >
     <div class="forcolor">
