@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>RITct Blog</title>
-  <meta name="description" content="Tutorials, hacks, experiences and much more from the RIT Creative Team">
+  <title>Installing Python</title>
+  <meta name="description" content="">
 
-  <link rel="stylesheet" href="assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="stylesheet" href="../assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/07/13/scilab.html">
   <link rel="alternate" type="application/rss+xml" title="RITct Blog" href="/feed.xml">
-
+  <link rel="stylesheet" type="text/css" href="../texteditor/prism.css">
+  <script src="/..texteditor/prism.js"></script>
 
 </head>
 
@@ -24,7 +25,7 @@
   <div class="wrapper">
 
 
-    <a class="site-title" href="blog.html">RITct Blog</a>
+    <a class="site-title" href="../blog.html">RITct Blog</a>
 
 
       <nav class="site-nav">
@@ -38,8 +39,9 @@
             </svg>
           </span>
         </label>
+
         <div class="trigger">
-          <a href="../index.html">Home</a> | <a href="about.html">About</a>
+            <a href="../../index.html">Home</a> | <a href="../about.html">About</a>
         </div>
       </nav>
 
@@ -49,74 +51,34 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Installing Python for Windows</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-13T12:50:02+05:30" itemprop="datePublished">
 
+        Ebey Abraham
+      </time>
+      </p>
+  </header>
 
-
-
-  <ul class="post-list">
-
-    <li>
-
-      <span class="post-meta">Aug 04, 2017</span>
-
-      <h2>
-        <a href="post/python.html">Installing Python on Windows</a>
-      </h2>
-    </li>
-
-    <li>
-
-      <span class="post-meta">Jul 13, 2017</span>
-
-      <h2>
-        <a href="post/scilab.html">Scilab: An Open Source Alternative to MATLAB</a>
-      </h2>
-    </li>
-
-    <li>
-
-      <span class="post-meta">Jul 7, 2017</span>
-
-      <h2>
-        <a href="post/biopython.html">Introduction to BioPython</a>
-      </h2>
-    </li>
-
-    <li>
-
-      <span class="post-meta">Jul 7, 2017</span>
-
-      <h2>
-        <a href="post/opencvintro.html">Introduction to OpenCV</a>
-      </h2>
-    </li>
-
-    <li>
-
-      <span class="post-meta">Jul 7, 2017</span>
-
-      <h2>
-        <a href="post/virtualenv.html">Python Virtual Environment</a>
-      </h2>
-    </li>
-
-      <li>
-
-        <span class="post-meta">Jul 6, 2017</span>
-
-        <h2>
-          <a href="post/numpy.html">An Introduction to NumPy</a>
-        </h2>
-      </li>
-
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="../../assets/images/virtualenv.png" alt="scilab" /></p>
+    <br><br>
+    <ol>
+      <li><p>Click <a href="https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz">here</a> to download Python 3.</p></li>
+      <li><p>Run the installation file</p></li>
+      <li><p>After you finish with the installation, go to the control panel</p></li>
+      <li><p>Go to system, then 'Advanced settings'</p></li>
+      <li><p>Click on 'Environment Variables'</p></li>
+      <li><p>Under 'System variables' click the variable called 'Path' then the 'Edit...' button. </p></li>
+      <li><p>Without deleting any other text, add C:\Python36; (include the semi-colon) to the beginning of the 'Variable value' and click OK.</p></li>
+      <li><p>Click OK on the 'Environment Variables' window</p></li>
+      <li><p>Open a new command prompt window type python, you will have python running in the command prompt</li></p>
+    </ol>
+  </div>
+</article>
 
       </div>
     </main>
