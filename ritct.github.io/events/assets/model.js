@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $(".event_img").click(function(){
+	$(".modal").fadeIn();
+	$(".modal_main").show();
+	  });
+});
+$(document).ready(function(){
+  $(".close").click(function(){
+	$(".modal").fadeOut();
+	$(".modal_main").fadeOut();
+	  });
+});

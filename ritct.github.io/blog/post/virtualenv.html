@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python Virtual Environment</title>
+  <meta name="description" content="When we install site packages in python (using pip or easy_install), they are placed in directories pointed to by site.getsitepackages()">
+
+  <link rel="stylesheet" href="../assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/07/07/virtualenv.html">
+  <link rel="alternate" type="application/rss+xml" title="RITct Blog" href="/feed.xml">
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+
+    <a class="site-title" href="../blog.html">RITct Blog</a>
+
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="site-title" href="../../">Home</a> | <a href="../about.html">About</a>
+        </div>
+      </nav>
+
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Python Virtual Environment</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-07T13:32:02+05:30" itemprop="datePublished">
+
+        Ebey Abraham
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>When we install site packages in python (using pip or easy_install), they are placed in directories pointed to by site.getsitepackages()</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">site</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">site</span><span class="o">.</span><span class="n">getsitepackages</span><span class="p">()</span>
+    <span class="p">[</span><span class="s">'/usr/local/lib/python3.5/dist-packages'</span><span class="p">,</span> <span class="s">'/usr/lib/python3/dist-packages'</span><span class="p">,</span> <span class="s">'/usr/lib/python3.5/dist-packages'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Now, suppose you are working on two projects project A and project B, but A requires version 2.x of a library C while project B requires version 1.X of the same library. And if you install both the versions, both pf them will, by default, get stored in the dist-packages/site-packages directory under the same name C. So you cannot use two versions of the same library. This is where python virtual environments come in handy. For example you can work on a project which requires Django 1.10 while also maintaining a project which requires Django 1.8.</p>
+
+<p><strong>What is python virtual environment?</strong></p>
+
+<p>At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has.</p>
+
+<p><strong>virtualenv</strong></p>
+
+<p><a href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> is a tool to create isolated Python environments.</p>
+
+<p>Install virtualenv using pip</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo pip install virtualenv
+</code></pre>
+</div>
+
+<p><strong>Usage</strong></p>
+
+<ol>
+  <li><strong>Create a virtual environment for a project</strong></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span> <span class="n">virtualenv</span> <span class="n">proj_name</span>
+</code></pre>
+</div>
+
+<p>This will create a folder in the current directory which will contain the Python executable files, and a copy of the <code class="highlighter-rouge">pip</code> library which you can use to install other packages. The name of the virtual environment will be <code class="highlighter-rouge">proj_name</code>.</p>
+
+<p>You can also use the python interpreter of your choice</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>virtualenv -p /usr/bin/python2.7 proj_name
+</code></pre>
+</div>
+
+<p>or you can change the interpreter globally with an env variable in <code class="highlighter-rouge">~/.bashrc</code>:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">export </span><span class="nv">VIRTUALENVWRAPPER_PYTHON</span><span class="o">=</span>/usr/bin/python2
+</code></pre>
+</div>
+
+<ol>
+  <li><strong>Activate the virtual environment</strong></li>
+</ol>
+
+<p>To begin with using the virtual environment it needs to be activated.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">source </span>proj_name/bin/activate
+</code></pre>
+</div>
+
+<p>The name of the current virtual environment will now appear on the left of the prompt (e.g. <code class="highlighter-rouge">(proj_name)Your-Computer:your_project UserName$)</code> to let you know that it’s active. From now on, any package that you install using pip will be placed in the <code class="highlighter-rouge">proj_name</code> folder, isolated from the global Python installation.</p>
+
+<ol>
+  <li><strong>Deactivate virtual environment</strong></li>
+</ol>
+
+<p>If your work on the virtual environment is done you can close if using</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>deactivate
+</code></pre>
+</div>
+
+<p>This puts you back to the system’s default Python interpreter with all its installed libraries.</p>
+
+<p>To delete a virtual environment, just delete its folder. (In this case, it would be <code class="highlighter-rouge">rm -rf proj_name</code>)</p>
+
+<p><strong>virtualenvwrapper</strong></p>
+
+<p>While virtual environments certainly solve some big problems with package management, they’re not perfect. After creating a few environments, you’ll start to see that they create some problems of their own, most of which revolve around managing the environments themselves. To help with this, the <code class="highlighter-rouge">virtualenvwrapper</code> tool was created, which is just some wrapper scripts around the main <code class="highlighter-rouge">virtualenv</code> tool.</p>
+
+<p><strong>Installation</strong></p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="nv">$ </span>pip install virtualenvwrapper
+    <span class="nv">$ </span><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>~/Envs
+    <span class="nv">$ </span><span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+</div>
+
+<p><strong>Usage</strong></p>
+
+<ol>
+  <li><strong>Create virtual environment</strong>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>mkvirtualenv proj_name
+</code></pre>
+    </div>
+    <p>This creates the proj_name folder inside ~/Envs.</p>
+  </li>
+  <li><strong>Work on a virtual environment</strong>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>workon proj_name
+</code></pre>
+    </div>
+  </li>
+  <li><strong>Deactivate</strong>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>deactivate
+</code></pre>
+    </div>
+  </li>
+  <li><strong>Delete</strong>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>rmvirtualenv venv
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>You can view the full list of commands <a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html">here</a>.</p>
+
+  </div>
+
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">RITct Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+
+              RITct Blog
+
+            </li>
+
+            <li><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+          <li>
+            <a href="https://github.com/RITct"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">RITct</span></a>
+
+          </li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tutorials, hacks, experiences and much more from the RIT Creative Team
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

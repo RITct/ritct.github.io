@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>An Introduction to NumPy</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/07/06/numpy.html">
+  <link rel="alternate" type="application/rss+xml" title="RITct Blog" href="/feed.xml">
+
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+
+    <a class="site-title" href="../blog.html">RITct Blog</a>
+
+
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a href="../../index.html">Home</a> | <a href="../about.html">About</a>
+        </div>
+      </nav>
+
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">An Introduction to NumPy</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-06T13:32:02+05:30" itemprop="datePublished">
+
+        Gautam Krishna R
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="../../assets/images/numpy.jpg" alt="NumPy" /></p>
+
+<p>Numerical python or simply NumPy is one of the best modules to perform scientific computing in python. It is extensively used for data science as well as image manipulation using python. I recently learned how to use this module effectively in my projects, when started learning Machine learning and Data Science using python. I was amazed with the features of NumPy and I found it quite interesting to work with NumPy. Within some hours of usage i fell in love with it.</p>
+
+<p><strong>What is NumPy</strong></p>
+
+<p><a href="https://github.com/numpy/numpy/blob/master/README.md">Numpy’s GitHub readme</a> defines it as:</p>
+
+<p>NumPy is the fundamental package needed for scientific computing with Python. This package contains:</p>
+
+<ul>
+  <li>a powerful N-dimensional array object</li>
+  <li>sophisticated (broadcasting) functions</li>
+  <li>tools for integrating C/C++ and Fortran code</li>
+  <li>useful linear algebra, Fourier transform, and random number capabilities.</li>
+</ul>
+
+<p>It derives from the old Numeric code base and can be used as a replacement for Numeric. It also adds the features introduced by numarray and can be used to replace numarray.</p>
+
+<p>Simply NumPy is an open source python library that allows us to do scientific calculations in python. It has superpowers to magically support daunting vector and matrix computations. The core of the NumPy package, is the ndarray object. This encapsulates n-dimensional arrays of homogeneous data types, with many optimizations for performance. Narrays are created in contrast to Python’s built-in list data structure.</p>
+
+<p><strong>Why NumPy</strong></p>
+
+<p>As i said earlier, NumPy is created to overcome the limitations of python’s list data structure. We can use python lists instead of NumPy to perform various calculations like matrix multiplication, vector products etc. Using NumPy instead of lists will not only improve the performance of the code, but also will reduce the number of lines of the code. In this blog i will compare list datatype with numpy.</p>
+
+<p><strong>Install NumPy</strong></p>
+
+<p>You can use pip to install NumPy. If you don’t have python and pip installed, you can download it from <a href="http://python.org/download/">here</a>. After installation, use the command below to install NumPy:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install numpy
+</code></pre>
+</div>
+<p>Now the NumPy will be installed on your machine.</p>
+
+<p><strong>Numpy v/s Lists</strong></p>
+
+<p>Python has a powerful built in data type known as lists. It has everything in its superpower to make it useful for almost any advanced scientific applications, but it is still limited while comparing to NumPy’s array data type. Lets compare python lists with NumPy arrays. I will be using python shell in this examples. Just type the python command to launch the shell.</p>
+
+<p>You can create a NumPy array using the code below:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>You can create a new python list containing same elements using the code below:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>lets print both of them to the console:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span> <span class="c"># Numpy Array</span>
+     <span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="mi">2</span>
+     <span class="mi">3</span>
+     <span class="mi">4</span>
+     <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span> <span class="c"># Python List</span>
+     <span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+     <span class="mi">1</span>
+     <span class="mi">2</span>
+     <span class="mi">3</span>
+     <span class="mi">4</span>
+</code></pre>
+</div>
+
+<p>As you can see that NumPy array works exactly the same way as list. We can simply use a loop to print its elements. Even though both looks the same, there’s some difference with the python lists and NumPy arrays. We can simply use the code below to add a new element to the list:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>We can’t do the same in NumPy arrays, It will throw an error:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+      <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="nb">AttributeError</span><span class="p">:</span> <span class="s">'numpy.ndarray'</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s">'append'</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+    <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+      <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="nb">ValueError</span><span class="p">:</span> <span class="n">operands</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">broadcast</span> <span class="n">together</span> <span class="k">with</span> <span class="n">shapes</span> <span class="p">(</span><span class="mi">4</span><span class="p">,)</span> <span class="p">(</span><span class="mi">2</span><span class="p">,)</span> <span class="p">(</span><span class="mi">4</span><span class="p">,)</span>
+</code></pre>
+</div>
+
+<p>As you can see that both doesn’t works in the case of NumPy array. Lists use plus operator for concatenation, but NumPy arrays use the plus operator differently. So lets check it out. Lets find the element wise sum of an array using NumPy and python lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">b2</span> <span class="o">=</span> <span class="p">[]</span> <span class="c"># Temporary List</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span> <span class="c"># Using List</span>
+    <span class="o">...</span>     <span class="n">b2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span> <span class="o">+</span> <span class="n">element</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">b2</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+
+
+    <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a</span> <span class="c"># Using NumPy array</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>Pretty easy right!</p>
+
+<p><strong>NumPy in action</strong></p>
+
+<p>NumPy arrays treat plus operator(+) as the element wise addition operator. We can also use it to add two different arrays, or even we can use it to perform scalar addition to an array. NumPy array treats multiplication operator(*) as matrix multiplication operator. Most operators act element wise in NumPy arrays. Lets see the superpowers of NumPy arrays:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="c"># NumPy Array</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span> <span class="c">#New NumPy array</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a2</span> <span class="c"># Matrix addition</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">3</span> <span class="c"># Addition with a scalar</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a2</span> <span class="c"># Matrix multiplication</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">28</span><span class="p">])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">3</span> <span class="c"># Multiplication with a scalar</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">3</span> <span class="c"># Power operator</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">int32</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span> <span class="c"># Sum of elements in a</span>
+    <span class="mi">45</span>
+</code></pre>
+</div>
+
+<p>As you can see that the matrix arithmetic works like a breeze in NumPy arrays. We don’t need to use the annoying loops anymore to perform those.</p>
+
+<p>If you have an N dimensional matrix you can use NumPy to perform all these operations on it. NumPy has everything built in to perform these operations effectively by providing an abstract layer to you. For a 2D matrix lets check these operations:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">],[</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># access each row</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="c"># access element i=0 j=1</span>
+    <span class="mi">2</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c"># access element i=0 j=1</span>
+    <span class="mi">2</span>
+
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span> <span class="c"># Scalar Multiplication</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">6</span><span class="p">],</span>
+           <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">a2</span> <span class="c"># Addition</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">27</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a2</span> <span class="c"># Multiplication</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">22</span><span class="p">,</span>  <span class="mi">36</span><span class="p">],</span>
+           <span class="p">[</span> <span class="mi">52</span><span class="p">,</span>  <span class="mi">70</span><span class="p">,</span>  <span class="mi">90</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">112</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">162</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">-</span> <span class="n">a2</span> <span class="c"># Subraction</span>
+    <span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">inva</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># a inverse</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">inva</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="o">-</span><span class="mf">4.50359963e+15</span><span class="p">,</span>   <span class="mf">9.00719925e+15</span><span class="p">,</span>  <span class="o">-</span><span class="mf">4.50359963e+15</span><span class="p">],</span>
+           <span class="p">[</span>  <span class="mf">9.00719925e+15</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.80143985e+16</span><span class="p">,</span>   <span class="mf">9.00719925e+15</span><span class="p">],</span>
+           <span class="p">[</span> <span class="o">-</span><span class="mf">4.50359963e+15</span><span class="p">,</span>   <span class="mf">9.00719925e+15</span><span class="p">,</span>  <span class="o">-</span><span class="mf">4.50359963e+15</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Determinant of a</span>
+    <span class="mf">6.6613381477509402e-16</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Diagonals of a</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Sum of diagonals</span>
+    <span class="mi">15</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># Eigen values and eigen vectors of a</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+    <span class="p">(</span><span class="n">array</span><span class="p">([</span>  <span class="mf">1.61168440e+01</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.11684397e+00</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.30367773e-15</span><span class="p">]),</span> <span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.23197069</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.78583024</span><span class="p">,</span>  <span class="mf">0.40824829</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mf">0.52532209</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08675134</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.81649658</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mf">0.8186735</span> <span class="p">,</span>  <span class="mf">0.61232756</span><span class="p">,</span>  <span class="mf">0.40824829</span><span class="p">]]))</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># eigen value</span>
+    <span class="n">array</span><span class="p">([</span>  <span class="mf">1.61168440e+01</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.11684397e+00</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.30367773e-15</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c"># eigen vectors</span>
+    <span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.23197069</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.78583024</span><span class="p">,</span>  <span class="mf">0.40824829</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mf">0.52532209</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08675134</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.81649658</span><span class="p">],</span>
+           <span class="p">[</span><span class="o">-</span><span class="mf">0.8186735</span> <span class="p">,</span>  <span class="mf">0.61232756</span><span class="p">,</span>  <span class="mf">0.40824829</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="c"># Power</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span><span class="o">.</span><span class="n">T</span> <span class="c"># Transpose of a2</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">]])</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c"># mean</span>
+    <span class="mf">5.0</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">var</span><span class="p">()</span> <span class="c"># variance</span>
+    <span class="mf">6.666666666666667</span>
+
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="c"># NumPy Matrix type</span>
+    <span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+</code></pre>
+</div>
+
+<p>NumPy also have a matrix type in addition to NumPy arrays. The official documentation recommends using matrix type for matrix operations. NumPy performs well for multidimensional matrices as well. In addition with these standard operations NumPy has several other functions available to make your programs a lot more simpler. Lets see some of the examples:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+    <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mf">1.</span>        <span class="p">,</span>  <span class="mf">1.41421356</span><span class="p">,</span>  <span class="mf">1.73205081</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mf">0.84147098</span><span class="p">,</span>  <span class="mf">0.90929743</span><span class="p">,</span>  <span class="mf">0.14112001</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mf">0.54030231</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.41614684</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9899925</span> <span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mf">1.55740772</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.18503986</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.14254654</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span> <span class="mf">0.</span>        <span class="p">,</span>  <span class="mf">0.69314718</span><span class="p">,</span>  <span class="mf">1.09861229</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">array</span><span class="p">([</span>  <span class="mf">2.71828183</span><span class="p">,</span>   <span class="mf">7.3890561</span> <span class="p">,</span>  <span class="mf">20.08553692</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>So simply NumPy treats an array like a vector or a mathematical object. To do operations on list, you need to use a for loop. Since for loops are slow it may take more time to perform various operations while compared to NumPy arrays. Lets do some operations on vector and matrices:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span> <span class="c"># Dot product a.a2</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="mi">84</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span>  <span class="mi">96</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">201</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">231</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">318</span><span class="p">,</span> <span class="mi">342</span><span class="p">,</span> <span class="mi">366</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="c"># Dot product a2.a</span>
+    <span class="n">array</span><span class="p">([[</span><span class="mi">138</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">204</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">174</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">258</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">210</span><span class="p">,</span> <span class="mi">261</span><span class="p">,</span> <span class="mi">312</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">a2</span><span class="p">)</span> <span class="c"># Dot product a.a2</span>
+    <span class="n">array</span><span class="p">([[</span> <span class="mi">84</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span>  <span class="mi">96</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">201</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">231</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">318</span><span class="p">,</span> <span class="mi">342</span><span class="p">,</span> <span class="mi">366</span><span class="p">]])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">maga</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c"># magnitude of a</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">maga2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span> <span class="err">@</span> <span class="n">magnitude</span> <span class="n">of</span> <span class="n">a2</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">maga</span> <span class="o">*</span> <span class="n">maga2</span><span class="p">))</span> <span class="c"># angle between a and a2</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">angle</span> <span class="c"># in radian</span>
+    <span class="mf">1.1352271440633694</span>
+</code></pre>
+</div>
+
+<p>To generate random matrices for testing just use:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c"># Generates zero array</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c"># 5*5 Zero matrix</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c"># 5*5 Unit matrix</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c"># random 5*5 array with elements &lt; 0</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">0.95798455</span><span class="p">,</span>  <span class="mf">0.24020745</span><span class="p">,</span>  <span class="mf">0.62194033</span><span class="p">,</span>  <span class="mf">0.93840616</span><span class="p">,</span>  <span class="mf">0.40785382</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.01294948</span><span class="p">,</span>  <span class="mf">0.7228686</span> <span class="p">,</span>  <span class="mf">0.67448551</span><span class="p">,</span>  <span class="mf">0.20403856</span><span class="p">,</span>  <span class="mf">0.046528</span>  <span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.63331545</span><span class="p">,</span>  <span class="mf">0.89097084</span><span class="p">,</span>  <span class="mf">0.01754348</span><span class="p">,</span>  <span class="mf">0.17084474</span><span class="p">,</span>  <span class="mf">0.32112247</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.97881143</span><span class="p">,</span>  <span class="mf">0.83247286</span><span class="p">,</span>  <span class="mf">0.65629919</span><span class="p">,</span>  <span class="mf">0.21386575</span><span class="p">,</span>  <span class="mf">0.72251318</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.20167738</span><span class="p">,</span>  <span class="mf">0.24018638</span><span class="p">,</span>  <span class="mf">0.85572554</span><span class="p">,</span>  <span class="mf">0.7706282</span> <span class="p">,</span>  <span class="mf">0.80284553</span><span class="p">]])</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c"># Random 5*5 matrix</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mf">0.16603893</span><span class="p">,</span>  <span class="mf">1.14554164</span><span class="p">,</span>  <span class="mf">0.40170708</span><span class="p">,</span>  <span class="mf">0.52864275</span><span class="p">,</span>  <span class="mf">1.50740231</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.13218522</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.20418907</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.09940842</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.25180194</span><span class="p">,</span>  <span class="mf">0.6859655</span> <span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.09053258</span><span class="p">,</span>  <span class="mf">1.11002797</span><span class="p">,</span>  <span class="mf">0.1455936</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.33915414</span><span class="p">,</span>  <span class="mf">0.25604553</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.96807902</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.03155716</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.79001785</span><span class="p">,</span>  <span class="mf">0.4567955</span> <span class="p">,</span> <span class="o">-</span><span class="mf">1.93929055</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">1.38540075</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.82320053</span><span class="p">,</span>  <span class="mf">0.02358358</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.13975953</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.23515682</span><span class="p">]])</span>
+</code></pre>
+</div>
+
+<p>Summing up all these, even though the NumPy arrays contain several advanced functions when compared with lists datatype, it can’t be considered as a replacement for python lists. NumPy is really useful if you want do do some mathematical operations on an array, If we are using a list instead of NumPy arrays we need to traverse each and every elements using a loop, it will significantly reduce the overall performance of the program. Using NumPy will not only improves the performance of the program, but also adds advanced functionalities to the code.</p>
+
+<p>Visit the official docs to learn more: https://docs.scipy.org/doc/numpy/</p>
+
+<p>Any suggestions to this article is always welcome. Please don’t forget to comment on this article if you found any mistakes</p>
+
+<p><strong>This article was originally published at</strong>: <a href="http://www.gautamkrishnar.com/an-intro-to-numpy/">An Intro to NumPy</a></p>
+
+  </div>
+
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">RITct Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+
+              RITct Blog
+
+            </li>
+
+            <li><a href="mailto:your-email@example.com">your-email@example.com</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+          <li>
+            <a href="https://github.com/RITct"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">RITct</span></a>
+
+          </li>
+
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Tutorials, hacks, experiences and much more from the RIT Creative Team
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
