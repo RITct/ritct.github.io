@@ -1,0 +1,125 @@
+#head
+{
+  font-family:'Dosis:400', sans-serif;
+
+  font-size: 40px;
+  background-color:#45a29e;
+}
+.blog
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../assets/images/blogbg.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
+  margin-bottom: 10%;
+  border-radius: 30px;
+  text-shadow: #ff0000;
+  padding: 3% 3% 5% 3%;
+}
+#about
+{
+  border: 2px solid #45a29e;
+  margin-top:420px;
+  padding: 0 10px 10px 10px;
+  text-align: center;
+  font-size: 20px;
+     width:100%;
+}
+
+.boxes
+{
+  margin-top:100px;
+    width:100%;
+  border: 2px solid #45a29e;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+#text
+{
+  font-family: 'Dosis', sans-serif;
+}
+
+
+header {
+    float: left;
+   font-family: 'Dosis', sans-serif;
+
+    width: 100%;
+background-image:url('../assets/images/ny.jpeg');
+background-attachment: fixed;
+
+
+  }
+
+.project_img{
+  width: 180px;
+  height: 120px;
+}
+
+.blog_img{
+  width: 200px;
+  height: 120px;
+}
+.event_img{
+  width: 200px;
+  height: 120px;
+
+}
+
+#contact{
+  margin: 50px 25% 50px 25%; 
+}
+
+.brandQuote{
+  font-size: 400%;
+  padding-left: 290px;
+  color: #1f2833;
+}
+
+body
+{
+  margin:0;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+.project_img{
+  width: 75px;
+  height: 50;
+}
+
+.blog_img{
+  width: 80px;
+  height: 50px;
+}
+
+.event_img{
+  width: 80px;
+  height: 50px;
+}
+
+
+#contact{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.brandQuote{
+  padding-left: 10px;
+  font-size: 250%;
+}
+
+.blog{
+  background-size: auto;
+}
+
+.header{
+  background-size: auto;
+}
+
+}
+
+
+
+
+/*fixed horizontal scroll */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=kgiblty5amr904k4x8fofyo831orwe8z572sj9m9w7ojzimn'></script>
+
+  <link rel="stylesheet" type="text/css" href="prism.css">
+  <script src="prism.js"></script>
+
+  <script>
+  tinymce.init({
+    selector: '#mytextarea',
+    plugins: ['emoticons', 'image', 'codesample', 'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table contextmenu paste code'],
+    menubar :['insert'],
+  	toolbar: 'undo redo | emoticons | codesample | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+  });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+            	<div class="row justify-content-center">
+              		<div class="col-10 col-md-6">
+	              		<form action="https://formspree.io/aksh@ritcreativeteam.ml" method="POST">
+	                       <br style="clear:both">
+	                       <h1 style="margin-bottom: 25px; text-align: left;">Write a post !</h1>
+	                       <div class="form-group">
+	                          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+	                       </div>
+	                       <div class="form-group">
+	                          <input type="email" class="form-control" id="email" name="_replyto" placeholder="Email" required>
+	                       </div>
+	                       <br>
+	                       <div class="form-group">
+	                          <textarea class="form-control" type="textarea" name="message" id="mytextarea" placeholder="Type here" maxlength="140" rows="7"></textarea>
+	                       </div>
+	                       <br>
+	                       <button type="submit" id="submit" name="submit" value="Send" class="btn btn-primary pull-right">Submit</button>
+	                    </form>
+                    </div>
+              </div>
+           </div>
+</body>
+</html>
