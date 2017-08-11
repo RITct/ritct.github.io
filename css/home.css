@@ -7,7 +7,7 @@
 }
 .blog
 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../assets/images/blogbg.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url('../assets/images/blogBG.png');
   background-size: 100%;
   background-attachment: fixed;
   margin-bottom: 10%;
@@ -45,7 +45,7 @@ header {
    font-family: 'Dosis', sans-serif;
 
     width: 100%;
-background-image:url('../assets/images/ny.jpeg');
+background-image:url('../assets/images/ny.png');
 background-attachment: fixed;
 
 
@@ -67,7 +67,7 @@ background-attachment: fixed;
 }
 
 #contact{
-  margin: 50px 25% 50px 25%; 
+  margin: 50px 25% 50px 25%;
 }
 
 .brandQuote{
