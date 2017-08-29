@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9140bfe0-3ae7-4199-84fc-e2b7cf69b08b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/post/contest.html" afterPath="$PROJECT_DIR$/events/post/contest.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contest.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contest.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events/post/contest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/events/post/e3.html" />
         <option value="$PROJECT_DIR$/events/post/e1.html" />
         <option value="$PROJECT_DIR$/events/post/e2.html" />
-        <option value="$PROJECT_DIR$/events/post/contest.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/events/post/contest.html" />
       </list>
     </option>
   </component>
@@ -248,7 +248,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IEEE-Zeus-2.0-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nothing-private-master" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -290,7 +290,7 @@
       <workItem from="1502721852839" duration="6681000" />
       <workItem from="1503317694990" duration="2107000" />
       <workItem from="1503321280806" duration="3930000" />
-      <workItem from="1504011129613" duration="9430000" />
+      <workItem from="1504011129613" duration="9697000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1502209481467</created>
@@ -390,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504021737822</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added entry">
+      <created>1504021979666</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1504021979666</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30088000" />
+    <option name="totallyTimeSpent" value="30355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -437,7 +444,8 @@
     <MESSAGE value="added event 3" />
     <MESSAGE value=" added to event section" />
     <MESSAGE value="added pookalam contest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pookalam contest" />
+    <MESSAGE value="added entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="added entry" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1073,21 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/post/contest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#2;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -1129,6 +1122,21 @@
             <element signature="n#style#0;n#a#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/post/contest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#0;n#div#0;n#article#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
