@@ -4,21 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../assets/images/codehead.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In this festive season Tinkerhub RIT chapter presenting you code a pookalam competition. Using your favourite programming language code a pookalam design">
+    <link rel="shortcut icon" href="./private.jpg">
+    <meta name="keywords" content="onam,Thinkerhub,code,pookalam">
     <meta name="author" content="Shashank SJ">
-    <title>Workshop on Machine learning</title>
-    <meta name="description" content="">
-
+    <title>Code a pookalam</title>
     <link rel="stylesheet" href="../assets/main.css">
     <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/07/06/numpy.html">
     <link rel="alternate" type="application/rss+xml" title="RITct Events" href="/feed.xml">
+    <meta property="og:image" content="../assets/images/code1.jpeg" />
 
-
+    <style>
+        .pookalamSlide {display:none;}
+    </style>
 </head>
 
 
 <body>
-
 <header class="site-header" role="banner">
 
     <div class="wrapper">
@@ -53,25 +58,55 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
             <header class="post-header">
-                <h1 class="post-title" itemprop="name headline">Machine learning:What to Learn?<br>  How to Learn?</h1>
+                <h1 class="post-title" itemprop="name headline">Code a pookalam !</h1>
             </header>
             <div class="post-content" itemprop="articleBody">
-                <p><img src="../assets/images/ml.png" alt="machine learning" /></p>
-                <p>
-                    The first session of our series of Machine Learning workshops gave a brief introduction to machine learning and we built a sentiment analyzer.<br>
+                <!-- <p><img src="../assets/images/poster.jpeg" alt="Code a pookalam !" /></p> can add poster if neede -->
+                <p style="font-size: 30px">
+                    In this festive season Tinkerhub RIT chapter presenting you code a pookalam competition. Using your favourite programming language code a pookalam design and get a 1k cash prize.
                     <br>
-
-                    Our next session will introduce you to some basic concepts of machine learning. We will hack the sentiment analyzer to understand how it works and get started with ML-paths and resources.<br>
-                    <br>
-                    Those who couldn't attend the first workshop, worry not! We will be giving a quick recap in this session.<br>
-                  <!--  <br><a href="https://goo.gl/forms/xziRd7PqdekcWUoq1"><img src="../assets/images/register.png"/></a><br> -->
                 </p>
-                <p><strong>
-                    You can find the code and explanations <a href="https://github.com/RITct/Intro-to-Machine-Learning-Workshop"> here</a>
-                </strong></p>
-                <!---<p>
-                    <em><a href="https://yadi.sk/a/dCaX_Ma93LrPdx"> Workshop Gallery </a></em>
-                </p>--->
+                <br>
+                <h2 >Guidelines</h2>
+                <p style="font-size: 20px">
+                    1. The code for generating design should be a single program.
+                    <br>
+                    2. Send the code with screenshot of design generated to admin@ritcreativeteam.ml.<br> OR <a href="mailto:admin@ritcrativeteam.ml?Subject=Pookalam%20code" target="_top">Send Mail</a>
+                    <br>
+                    3. The program should not use external assets designed in blender, unity... etc
+                    <br>
+                    4. Weightage will be given to<br>
+
+                -Number of likes<br>
+                -Efficency of code<br>
+                -Aesthetics of pattern<br>
+
+                    5. Sample scripts can be found <a href="http://github.com/RITct/Onam">here</a>
+                    <br>
+                    6. Contest will end on September 4 midnight.
+                    <!--  <br><a href="https://goo.gl/forms/xziRd7PqdekcWUoq1"><img src="../assets/images/register.png"/></a><br> -->
+                </p>
+                <div style="max-width:500px">
+                    <img class="pookalamSlide" src="../assets/images/code3.jpg" style="height: inherit;width: 100%;">
+                    <img class="pookalamSlide" src="../assets/images/code2.jpeg" style="height: inherit;width:100%">
+                    <img class="pookalamSlide" src="../assets/images/code1.jpeg" style="height: inherit;width:100%">
+                </div>
+                <script>
+                    var current = 0;
+                    autoSlideshow();
+
+                    function autoSlideshow() {
+                        var i;
+                        var x = document.getElementsByClassName("pookalamSlide");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        current++;
+                        if (current > x.length) {current = 1}
+                        x[current-1].style.display = "block";
+                        setTimeout(autoSlideshow, 2000); // Change image every 2 seconds
+                    }
+                </script>
                 <footer class="site-footer">
 
                     <div class="wrapper">
